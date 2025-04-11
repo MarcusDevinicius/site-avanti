@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    display: grid;
+    height: 150px;
+    grid-template-rows: 30px 80px 40px;
+}
+
+header > .promocao {
+    background: blue;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > .icons-container {
+    background: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+}
+
+header > .icons-container > .icon-avanti-container {
+    justify-self: end;
+}
+
+header > .icons-container > .input-container  {
+    position: relative;
+    height: 40px;
+    background: red;
+}
+
+header > .icons-container > .input-container > input {
+    width: 480px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 24px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+header > .icons-container > .input-container  > .lupa {
+    position: absolute;
+    top: 10px;
+    left: 440px;
+}
+
+header > .icons-container > .user-login {
+    display: flex;
+    justify-self: end;
+    flex-direction: row;
+    gap: 10px;
+    margin-right: 70px;
+}
+
+header > .icons-container > .user-login > .bnc-user {
+    margin-right: 8px;
+}
+
+header > .icons-container > .carrinho {
+    /* margin-left: -90px; */
+}
+
+header > .nav-options {
+    display: flex;
+    
+}
+
+header > .nav-options ul {
+    display: grid;
+    list-style: none;
+    grid-template-rows: 1fr;
+    grid-template-columns:  repeat(9, 1fr);
+}
+
+header > .nav-options ul > li {
+    justify-self: center;
+    align-self: center;
+}
+
+header > .nav-options ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+main > .section-1 > .img-destaque {
+    width: 100%;
+}
+
+main > .section-1 > .img-destaque > img {
+    height: 510px;
+    width: 100%;
+}
+
