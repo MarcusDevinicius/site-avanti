@@ -99,8 +99,16 @@ header > .nav-options ul > li > a {
     color: black;
 }
 
+main > .section-1 {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 520px 1fr;
+}
+
 main > .section-1 > .img-destaque {
     width: 100%;
+    grid-row: 1;
+    grid-column: 1/4;
 }
 
 main > .section-1 > .img-destaque > img {
@@ -108,3 +116,49 @@ main > .section-1 > .img-destaque > img {
     width: 100%;
 }
 
+main > .section-1 > .carrossel-container {
+    background: red;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-column: 2;
+}
+
+main > .section-1 > .carrossel-container > .text-details {
+    background: gray;
+    grid-row: 1;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1121px;
+}
+
+main > .section-1 > .carrossel-container > .text-details > h1 {
+    align-self: center;
+    justify-self: start;
+    margin-left: 20px;
+
+}
+
+main > .section-1 > .carrossel-container > .text-details > h2 {
+    align-self: center;
+    justify-self: end;
+    margin-right: 20px;
+}
+
+main > .section-1 > .carrossel-container > .elementos-carrossel {
+    grid-column: 2;
+    grid-row: 2;
+    overflow: hidden;
+}
+
+main > .section-1 > .carrossel-container > .elementos-carrossel > nav > ul.carrossel {
+    background-color: white;
+    width: 100vw;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
