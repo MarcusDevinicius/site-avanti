@@ -33,7 +33,7 @@ header > .icons-container {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 50px;
+    column-gap: 70px;
 }
 
 header > .icons-container > .icon-avanti-container {
@@ -64,7 +64,7 @@ header > .icons-container > .input-container  > .lupa {
 
 header > .icons-container > .user-login {
     display: flex;
-    justify-self: end;
+    justify-self: center;
     flex-direction: row;
     gap: 10px;
     margin-right: 70px;
@@ -80,7 +80,7 @@ header > .icons-container > .carrinho {
 
 header > .nav-options {
     display: flex;
-    
+    justify-content: space-evenly;
 }
 
 header > .nav-options ul {
@@ -93,16 +93,22 @@ header > .nav-options ul {
 header > .nav-options ul > li {
     justify-self: center;
     align-self: center;
+    /* background: rebeccapurple; */
 }
 
 header > .nav-options ul > li > a {
     text-decoration: none;
     color: black;
+    font-size: 14px;
+}
+
+header > .nav-options ul > li > a .hamburguer {
+    margin-right: 3px;
 }
 
 main > .section-1 {
     display: grid;
-    grid-template-columns: 200px 1fr 200px;
+    grid-template-columns: 140px 1fr 140px;
     grid-template-rows: 520px 1fr;
 }
 
@@ -197,12 +203,13 @@ main > .section-1 > .carrossel-container > .elementos-carrossel > nav > ul.carro
 }
 
 ul.carrossel > li {
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
     border: 1px solid gray;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-top: 10px;
 }
 
  ul.carrossel > li > p.novo {
@@ -217,6 +224,8 @@ ul.carrossel > li {
     padding: 7px 5px;
     border-radius: 4px;
     position: absolute;
+    top: 8px;
+    left: 8px;
  }
 
  ul.carrossel > li > h3 {
@@ -226,6 +235,11 @@ ul.carrossel > li {
     display: flex;
     align-items: center;
     color: #303030;
+ }
+
+ ul.carrossel > li > img.modelo-camisa {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 20px;
  }
 
  ul.carrossel > li > .preco-info {
@@ -307,6 +321,8 @@ ul.carrossel > li {
     border-radius: 50%;
  }
 
+
+/* Animações envolvendo JavaScript */
  .pontinhos-carrossel > span.ativo {
     background: #303030;
     border: 1px solid #303030;
