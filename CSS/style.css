@@ -109,7 +109,7 @@ header > .nav-options ul > li > a .hamburguer {
 main > .section-1 {
     display: grid;
     grid-template-columns: 140px 1fr 140px;
-    grid-template-rows: 520px 1fr;
+    grid-template-rows: 520px 460px 30px;
 }
 
 main > .section-1 > .img-destaque {
@@ -130,6 +130,7 @@ main > .section-1 > .carrossel-container {
     grid-template-columns: 1fr;
     grid-template-rows: 50px 1fr 30px;
     grid-column: 2;
+    overflow: hidden;
 }
 
 main > .section-1 > .carrossel-container > .text-details {
@@ -161,10 +162,9 @@ main > .section-1 > .carrossel-container > .text-details > h2 {
 main > .section-1 > .carrossel-container > .elementos-carrossel {
     grid-column: 2;
     grid-row: 2;
-    overflow: hidden;
 }
 
-main > .section-1 > .carrossel-container > .elementos-carrossel > .carrossel-nav {
+main > .section-1 > .carrossel-container > .elementos-carrossel > .carrossel-nav{
     position: relative;
 }
 
@@ -179,6 +179,10 @@ main > .section-1 > .seta-esquerda {
     cursor: pointer;
 }
 
+main > .section-1 > .seta-esquerda.ativo {
+    
+} 
+
 main > .section-1  > .seta-direita {
     grid-column: 3;
     grid-row: 2;
@@ -190,16 +194,19 @@ main > .section-1  > .seta-direita {
     cursor: pointer;
 }
 
-
+main > .section-1 > .seta-direita.ativo {
+    
+} 
 
 main > .section-1 > .carrossel-container > .elementos-carrossel > nav > ul.carrossel {
     background-color: white;
-    width: 100vw;
+    /* width: 100vw; */
     list-style: none;
     display: flex;
     gap: 20px;
     flex-direction: row;
-    overflow: hidden;
+    padding-right: 10px;
+    transition: transform .3s;
 }
 
 ul.carrossel > li {
@@ -301,9 +308,15 @@ ul.carrossel > li {
     border: none;
     border-radius: 8px;
     margin: 8px;
+    cursor: pointer;
+    transition: all 3.s ease-in-out;
  }
 
- main > .section-1 > .carrossel-container > .pontinhos-carrossel {
+ ul.carrossel > li > button:hover {
+    background: #0153e0;
+ }
+
+ main > .section-1 >  .pontinhos-carrossel {
     /* background: lightgreen; */
     grid-row: 3;
     grid-column: 2;
@@ -323,7 +336,13 @@ ul.carrossel > li {
 
 
 /* Animações envolvendo JavaScript */
+
  .pontinhos-carrossel > span.ativo {
     background: #303030;
+    border: 1px solid #303030;
+ }
+
+ .pontinhos-carrossel > span.inativo {
+    background: #838383;
     border: 1px solid #303030;
  }
