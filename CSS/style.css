@@ -14,42 +14,49 @@ header {
     display: grid;
     height: 150px;
     grid-template-rows: 30px 80px 40px;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 header > .promocao {
-    background: blue;
+    background: #005CFF;
     color: white;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-row: 1;
+    grid-column: 1/-1;
 }
 
 header > .icons-container {
-    background: lightblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, auto);
     column-gap: 70px;
+    grid-row: 2;
+    grid-column: 1/-1;
+    justify-self: center;
 }
 
 header > .icons-container > .icon-avanti-container {
-    justify-self: end;
+    justify-self: start;
 }
 
 header > .icons-container > .input-container  {
     position: relative;
     height: 40px;
-    background: red;
+    /* background: red; */
+    grid-column: 2/4;
+    justify-self: center;
 }
 
 header > .icons-container > .input-container > input {
     width: 480px;
     height: 40px;
-    border: none;
+    border: 2px solid #DDDDDD;
     border-radius: 10px;
     padding-left: 24px;
     padding-top: 11px;
@@ -67,7 +74,9 @@ header > .icons-container > .user-login {
     justify-self: center;
     flex-direction: row;
     gap: 10px;
-    margin-right: 70px;
+    margin-left: 200px;
+    grid-column: 4;
+    justify-self: end;
 }
 
 header > .icons-container > .user-login > .bnc-user {
@@ -80,14 +89,18 @@ header > .icons-container > .carrinho {
 
 header > .nav-options {
     display: flex;
-    justify-content: space-evenly;
+    grid-column: 1/-1;
+    grid-row: 3;
+    justify-self: center;    
 }
+
 
 header > .nav-options ul {
     display: grid;
     list-style: none;
     grid-template-rows: 1fr;
-    grid-template-columns:  repeat(9, 1fr);
+    grid-template-columns:  repeat(9, auto);
+    column-gap: 24px;
 }
 
 header > .nav-options ul > li {
@@ -100,16 +113,31 @@ header > .nav-options ul > li > a {
     text-decoration: none;
     color: black;
     font-size: 14px;
+    padding: 10px 5px;
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
 }
+
+header > .nav-options ul > li > a:hover {
+    background: rgba(167, 167, 167, 0.404);
+}   
 
 header > .nav-options ul > li > a .hamburguer {
     margin-right: 3px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
 }
 
 main > .section-1 {
     display: grid;
     grid-template-columns: 140px 1fr 140px;
     grid-template-rows: 520px 460px 30px;
+    grid-row: 1;
 }
 
 main > .section-1 > .img-destaque {
@@ -332,6 +360,96 @@ ul.carrossel > li {
     background: #838383;
     margin-right: 7px;
     border-radius: 50%;
+ }
+
+ .section-2 {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    height: 100vh;
+    column-gap: 40px;
+ }
+
+ .section-2 > div.img-container {
+    grid-row: 1/-1;
+    grid-column: 2;
+    justify-self: center;
+ }
+
+ .section-2 > div.img-container > img {
+    height: 695px;
+ }
+
+ .section-2 > article {
+    grid-column: 3;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 40px 200px 200px;
+    row-gap: 22px;
+    max-width: 487px;
+ }
+
+ .section-2 > article > h1 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+ }
+
+ .section-2 > article > p {
+    font-size: 18px;
+    font-family: "Nunito", sans-serif;
+ }
+
+ .section-3 {
+    background: #DEDEDE;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1;
+    height: 100vh;
+ }
+
+ .section-3 > article {
+    grid-column: 2;
+    align-self: center;
+    display: grid;
+    grid-template-rows: 42px 1fr;
+    row-gap: 50px;
+ }
+
+ .section-3 > article > h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+ }
+
+ .section-3 > article > ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 26px;
+    row-gap: 50px;
+ }
+
+ .section-3 > article > ul > img {
+    align-self: center;
+ }
+
+ .section-3 > article > ul > li {
+    width: 360px;
+    align-self: center;
+ }
+
+ .section-3 > .img-container {
+    grid-column: 3;
+    margin-left: 50px;
+    align-self: center;
+ }
+
+ .section-3 > .img-container > img {
+    height: 630px;
  }
 
 
