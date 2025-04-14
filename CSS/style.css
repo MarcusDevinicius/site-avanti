@@ -130,7 +130,8 @@ header > .nav-options ul > li > a .hamburguer {
 main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
+    row-gap: 50px;
 }
 
 main > .section-1 {
@@ -151,8 +152,8 @@ main > .section-1 > .img-destaque > img {
     width: 100%;
 }
 
-main > .section-1 > .carrossel-container {
-    /* background: red; */
+ .carrossel-container {
+    background: red;
     grid-row: 2;
     display: grid;
     grid-template-columns: 1fr;
@@ -161,7 +162,7 @@ main > .section-1 > .carrossel-container {
     overflow: hidden;
 }
 
-main > .section-1 > .carrossel-container > .text-details {
+ .carrossel-container > .text-details {
     /* background: gray; */
     grid-row: 1;
     grid-column: 1/3;
@@ -171,7 +172,7 @@ main > .section-1 > .carrossel-container > .text-details {
     max-width: 1121px;
 }
 
-main > .section-1 > .carrossel-container > .text-details > h1 {
+ .carrossel-container > .text-details > h1 {
     align-self: center;
     justify-self: start;
     margin-left: 20px;
@@ -179,7 +180,7 @@ main > .section-1 > .carrossel-container > .text-details > h1 {
     font-size: 20px;
 }
 
-main > .section-1 > .carrossel-container > .text-details > h2 {
+ .carrossel-container > .text-details > h2 {
     align-self: center;
     justify-self: end;
     margin-right: 20px;
@@ -187,16 +188,16 @@ main > .section-1 > .carrossel-container > .text-details > h2 {
     font-size: 14px;
 }
 
-main > .section-1 > .carrossel-container > .elementos-carrossel {
+ .carrossel-container > .elementos-carrossel {
     grid-column: 2;
     grid-row: 2;
 }
 
-main > .section-1 > .carrossel-container > .elementos-carrossel > .carrossel-nav{
+.carrossel-container > .elementos-carrossel > .carrossel-nav{
     position: relative;
 }
 
-main > .section-1 > .seta-esquerda {
+ .seta-esquerda {
     grid-column: 1;
     grid-row: 2;
     align-self: center;
@@ -207,11 +208,11 @@ main > .section-1 > .seta-esquerda {
     cursor: pointer;
 }
 
-main > .section-1 > .seta-esquerda.ativo {
+ .seta-esquerda.ativo {
     
 } 
 
-main > .section-1  > .seta-direita {
+ .seta-direita {
     grid-column: 3;
     grid-row: 2;
     align-self: center;
@@ -226,7 +227,7 @@ main > .section-1 > .seta-direita.ativo {
     
 } 
 
-main > .section-1 > .carrossel-container > .elementos-carrossel > nav > ul.carrossel {
+ .carrossel-container > .elementos-carrossel > nav > ul.carrossel {
     background-color: white;
     /* width: 100vw; */
     list-style: none;
@@ -371,17 +372,17 @@ ul.carrossel > li {
     column-gap: 40px;
  }
 
- .section-2 > div.img-container {
+ .xicara-e-texto > div.img-container {
     grid-row: 1/-1;
     grid-column: 2;
     justify-self: center;
  }
 
- .section-2 > div.img-container > img {
+ .xicara-e-texto > div.img-container > img {
     height: 695px;
  }
 
- .section-2 > article {
+ .xicara-e-texto > article {
     grid-column: 3;
     grid-row: 2;
     display: grid;
@@ -390,13 +391,13 @@ ul.carrossel > li {
     max-width: 487px;
  }
 
- .section-2 > article > h1 {
+ .xicara-e-texto > article > h1 {
     font-size: 30px;
     font-weight: bold;
     font-family: "Nunito", sans-serif;
  }
 
- .section-2 > article > p {
+ .xicara-e-texto > article > p {
     font-size: 18px;
     font-family: "Nunito", sans-serif;
  }
@@ -451,6 +452,56 @@ ul.carrossel > li {
  .section-3 > .img-container > img {
     height: 630px;
  }
+
+ .section-4 {
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr ;
+    grid-template-rows: 100px 600px;
+    height: 100vh;
+    column-gap: 40px;
+ }
+
+ .section-4  > div.img-container {
+    grid-row: 1 / 4;
+    grid-column: 2;
+    border-radius: 12px;
+ }
+
+ .section-5-carrossel {
+    display: grid;
+    grid-template-columns: 140px 1fr 140px;
+    grid-template-rows: 460px 30px;
+ }
+
+ .carrossel-section-5 {
+    display: grid;
+    grid-column: 2;
+ }
+
+ .section-5-carrossel > .seta-esquerda {
+    grid-column: 1;
+    grid-row: 1;
+ }
+
+ .section-5-carrossel > .seta-direita {
+    grid-column: 3;
+    grid-row: 1;
+ }
+
+ .section-5-carrossel > .pontinhos-carrossel {
+    grid-row: 2;
+    grid-column: 2;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .section-5-carrossel > .pontinhos-carrossel > .pontinho-carrossel{
+    /* background: white; */
+ }
+
 
 
 /* Animações envolvendo JavaScript */

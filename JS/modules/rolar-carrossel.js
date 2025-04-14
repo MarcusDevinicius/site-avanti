@@ -3,7 +3,8 @@ export default function initRolarCarrossel() {
     const leftArrow = document.querySelector('.seta-esquerda')
     const rightArrow = document.querySelector('.seta-direita')
     const pontinhosNav = document.querySelectorAll('.pontinho-carrossel');
-    console.log(pontinhosNav)
+    console.log(pontinhosNav);
+    console.log(carrossel);
     // carrossel.style.transform = 'translate3d(-2920px, 0, 0)';
 
 
