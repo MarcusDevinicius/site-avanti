@@ -1,57 +1,66 @@
-export default function initRolarCarrossel() {
-    const carrossel = document.querySelector('.carrossel');
-    const leftArrow = document.querySelector('.seta-esquerda')
-    const rightArrow = document.querySelector('.seta-direita')
-    const pontinhosNav = document.querySelectorAll('.pontinho-carrossel');
-    console.log(pontinhosNav);
-    console.log(carrossel);
+export default class RolarCarrossel {
+    constructor(carrossel, leftArrow, rightArrow, pontinhosNav) {
+        this.carrossel = document.querySelector(carrossel);
+        this.leftArrow = document.querySelector(leftArrow);
+        this.rightArrow = document.querySelector(rightArrow);
+        this.pontinhosNav = document.querySelectorAll(pontinhosNav)
+        this.deslocamento = 0;
+
+        this.moveRight = this.moveRight.bind(this);
+        this.moveLeft = this.moveLeft.bind(this);
+    }
     // carrossel.style.transform = 'translate3d(-2920px, 0, 0)';
 
+    init() {
+        this.rightArrow.addEventListener('click', this.moveRight);
+    }
 
-    let deslocamento = 0;
-    rightArrow.addEventListener('click', moveRight);
+    // let deslocamento = 0;
+    // rightArrow.addEventListener('click', moveRight);
 
-    function moveRight(event) {
-            deslocamento = deslocamento - 200;
-            carrossel.style.transform = `translate3d(${deslocamento}px, 0, 0)`
-            if(deslocamento < -2400) {
-                rightArrow.removeEventListener('click', moveRight);
-            }
-            leftArrow.addEventListener('click', moveLeft);
-            animaPontinhos(deslocamento);
-        console.log(deslocamento)
+    moveRight(event) {
+        console.log('MArcus')
+        this.deslocamento -= 200;
+        console.log(this.deslocamento)
+        this.carrossel.style.transform = `translate3d(${this.deslocamento}px, 0, 0)`
+        if(this.deslocamento < -2400) {
+            this.rightArrow.removeEventListener('click', this.moveRight);
+        }
+        this.leftArrow.addEventListener('click', this.moveLeft);
+        this.animaPontinhos(this.deslocamento, this.pontinhosNav);
+        
     }
 
     
-    function moveLeft() {
-        deslocamento += 200;
-        carrossel.style.transform = `translate3d(${deslocamento}px, 0, 0)`;
-        console.log(deslocamento);
-        if(deslocamento === 0) {
-            leftArrow.removeEventListener('click', moveLeft);
+    moveLeft() {
+        this.deslocamento += 200;
+        this.carrossel.style.transform = `translate3d(${this.deslocamento}px, 0, 0)`;
+        // console.log(deslocamento);
+        if(this.deslocamento === 0) {
+            this.leftArrow.removeEventListener('click', this.moveLeft);
         }
-        rightArrow.addEventListener('click', moveRight);
-        animaPontinhos(deslocamento);
+        this.rightArrow.addEventListener('click', this.moveRight);
+        this.animaPontinhos(this.deslocamento, this.pontinhosNav);
 
     }
 
-    function animaPontinhos(desloc) {
+    animaPontinhos(desloc, pontosNav) {
         if(desloc > -1200) {
-            pontinhosNav[0].classList.add('ativo');
-            pontinhosNav[1].classList.remove('ativo');
-            pontinhosNav[2].classList.remove('ativo');
+            pontosNav[0].classList.add('ativo');
+            pontosNav[1].classList.remove('ativo');
+            pontosNav[2].classList.remove('ativo');
         }
 
         if(desloc <= -1200 && desloc > -2400) {
-            pontinhosNav[0].classList.remove('ativo');
-            pontinhosNav[1].classList.add('ativo');
-            pontinhosNav[2].classList.remove('ativo');
+            pontosNav[0].classList.remove('ativo');
+            pontosNav[1].classList.add('ativo');
+            pontosNav[2].classList.remove('ativo');
         }
 
         if(desloc === -2400) {
-            pontinhosNav[0].classList.remove('ativo');
-            pontinhosNav[1].classList.remove('ativo');
-            pontinhosNav[2].classList.add('ativo');
+            pontosNav[0].classList.remove('ativo');
+            pontosNav[1].classList.remove('ativo');
+            pontosNav[2].classList.add('ativo');
         }
     }
 } 
