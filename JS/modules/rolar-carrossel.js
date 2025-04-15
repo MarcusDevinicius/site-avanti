@@ -3,7 +3,7 @@ export default class RolarCarrossel {
         this.carrossel = document.querySelector(carrossel);
         this.leftArrow = document.querySelector(leftArrow);
         this.rightArrow = document.querySelector(rightArrow);
-        this.pontinhosNav = document.querySelectorAll(pontinhosNav)
+        this.pontinhosNav = document.querySelectorAll(pontinhosNav);
         this.deslocamento = 0;
 
         this.moveRight = this.moveRight.bind(this);
@@ -19,9 +19,7 @@ export default class RolarCarrossel {
     // rightArrow.addEventListener('click', moveRight);
 
     moveRight(event) {
-        console.log('MArcus')
         this.deslocamento -= 200;
-        console.log(this.deslocamento)
         this.carrossel.style.transform = `translate3d(${this.deslocamento}px, 0, 0)`
         if(this.deslocamento < -2400) {
             this.rightArrow.removeEventListener('click', this.moveRight);
@@ -35,7 +33,6 @@ export default class RolarCarrossel {
     moveLeft() {
         this.deslocamento += 200;
         this.carrossel.style.transform = `translate3d(${this.deslocamento}px, 0, 0)`;
-        // console.log(deslocamento);
         if(this.deslocamento === 0) {
             this.leftArrow.removeEventListener('click', this.moveLeft);
         }
