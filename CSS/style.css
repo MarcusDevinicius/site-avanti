@@ -107,17 +107,32 @@ header > .nav-options ul > li {
     /* background: rebeccapurple; */
 }
 
-.nav-options ul > li > .submenu-1 {
+ .nav-options ul > li > .submenu-1 {
   background: white;
   position: absolute;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 130px;
-  max-height: 330px;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 20px 1fr;
+  max-height: 355px;
+  max-width: 1200px;
+  box-shadow: 1px 1px 4px -1px rgb(135, 135, 135);
+  /* display: none; */
 }
 
-.nav-options ul > li > .submenu-1 > .dpto-container {
-  width: 225px;
+.nav-options ul > li > .submenu-1 .sub-options{
+  grid-column: 1/2;
+  grid-row: 2;
+  background: rgb(255, 252, 252);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* column-gap: 90px; */
+}
+
+.nav-options ul > li > .submenu-1  .dpto-container {
+  max-width: 270px;
+  padding-right: 10px;
+  /* background: green; */
+
 }
 
 .nav-options ul > li > .submenu-1 ul {
@@ -128,37 +143,64 @@ header > .nav-options ul > li {
   padding: 20px 16px;
 }
 
+
+.nav-options ul > li > .submenu-1 li {
+  font-size: 14px;
+  cursor: default;
+  margin-bottom: 11px;
+  padding: 4px 2px;
+}
+
 .nav-options ul > li > .submenu-1 ul.departamentos {
   overflow-y: scroll;
-  background: #F9F9F9;
+  background: #F5F5F5;
+  width: 230px;
+
 }
 
 ul.departamentos::-webkit-scrollbar {
   background: #F5F5F5;
   width: 4px;
-  margin-right: 12px;
+  margin-top: 20px;
 }
 
 ul.departamentos::-webkit-scrollbar-thumb {
   background: #CECECE;
   border-radius: 2px;
+  margin-top: 20px;
 }
-
-.nav-options ul > li > .submenu-1 li {
-  font-size: 14px;
-  cursor: default;
-  margin-bottom: 10px;
-  padding: 4px 2px;
-}
-
 
 
 .nav-options ul > li > .submenu-1 .arrow-sbmn {
-  /* background: red; */
-  margin-left: 80px;
-  /* filter: hue-rotate(218) brightness(100); */
-
+  margin-left: 90px;
 }
+
+.nav-options ul > li > .submenu-1 .img-produtos {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  margin-right: 25px;
+  position: relative;
+} 
+
+.nav-options ul > li > .submenu-1 .img-produtos button {
+  position: absolute;
+  top: 213px;
+  left: 27px;
+  padding: 10px 25px;
+  background: transparent;
+  color: white;
+  border:2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.nav-options ul > li > .submenu-1 .img-produtos button:hover {
+  color: rgba(0, 0, 0, 0.596);
+  background: white;
+}
+
 
 header > .nav-options ul > li > a {
     text-decoration: none;
@@ -848,3 +890,19 @@ ul.carrossel > li {
     background: #838383;
     border: 1px solid #303030;
  }
+
+ .hamburguer {
+  transition: .3s;
+ }
+
+ .hamburguer.ativo {
+  transform: rotate(90deg);
+ }
+
+ .nav-options ul > li > .submenu-1 {
+    display: none;
+ }
+
+ .nav-options ul > li > .submenu-1.ativo {
+  display: grid;
+}

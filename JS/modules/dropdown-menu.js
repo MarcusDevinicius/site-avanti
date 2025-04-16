@@ -1,0 +1,45 @@
+export default class DropdownMenu {
+    constructor(option, burguer, submenu) {
+        this.option = document.querySelector(option);
+        this.burguer = document.querySelector(burguer);
+        this.submenu = document.querySelector(submenu);
+        this.events = ['click', 'mouseenter'];
+        this.html = document.documentElement;
+
+        this.animaDrop = this.animaDrop.bind(this);
+        this.handleClickOutside = this.handleClickOutside.bind(this);
+    }
+
+    clickOutside() {
+        this.html.addEventListener('click', this.handleClickOutside);
+    }
+
+    handleClickOutside(event) {
+        if(!this.submenu.contains(event.target) && !this.option.contains(event.target)) {
+            this.burguer.classList.remove('ativo');
+            this.submenu.classList.remove('ativo');
+        }
+    }
+
+    animaDrop() {
+        this.burguer.classList.toggle('ativo');
+        this.submenu.classList.toggle('ativo');
+        this.clickOutside();
+    }
+
+    mouseLeave() {
+
+    }
+
+    addEventListeners() {
+        this.events.forEach((userEvent) => {
+            this.option.addEventListener(userEvent, this.animaDrop); 
+        });
+        this.mouseLeave();
+    }
+
+    init() {
+        console.log( this.option,  this.burguer,  this.submenu);
+        this.addEventListeners();
+    }
+}
