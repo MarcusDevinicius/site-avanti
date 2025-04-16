@@ -91,6 +91,8 @@ header > .nav-options {
 }
 
 
+
+
 header > .nav-options ul {
     display: grid;
     list-style: none;
@@ -103,6 +105,59 @@ header > .nav-options ul > li {
     justify-self: center;
     align-self: center;
     /* background: rebeccapurple; */
+}
+
+.nav-options ul > li > .submenu-1 {
+  background: white;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 130px;
+  max-height: 330px;
+}
+
+.nav-options ul > li > .submenu-1 > .dpto-container {
+  width: 225px;
+}
+
+.nav-options ul > li > .submenu-1 ul {
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  max-height: 330px;
+  padding: 20px 16px;
+}
+
+.nav-options ul > li > .submenu-1 ul.departamentos {
+  overflow-y: scroll;
+  background: #F9F9F9;
+}
+
+ul.departamentos::-webkit-scrollbar {
+  background: #F5F5F5;
+  width: 4px;
+  margin-right: 12px;
+}
+
+ul.departamentos::-webkit-scrollbar-thumb {
+  background: #CECECE;
+  border-radius: 2px;
+}
+
+.nav-options ul > li > .submenu-1 li {
+  font-size: 14px;
+  cursor: default;
+  margin-bottom: 10px;
+  padding: 4px 2px;
+}
+
+
+
+.nav-options ul > li > .submenu-1 .arrow-sbmn {
+  /* background: red; */
+  margin-left: 80px;
+  /* filter: hue-rotate(218) brightness(100); */
+
 }
 
 header > .nav-options ul > li > a {
