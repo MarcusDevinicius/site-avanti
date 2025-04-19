@@ -2,4 +2,47 @@
     body {
         background: red;
     }
+
+    header {
+        display: grid;
+        height: 150px;
+        grid-template-rows: 52px 80px 40px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: 70px 1fr 70px;
+        position: relative;
+      }
+
+    header > .promocao {
+        background: #005cff;
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-row: 1;
+        grid-column: 1/-1;
+    }  
+
+    header .menumobile-container {
+        display: block;
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .user-login img.bnc-user {
+        display: none;
+    }
+
+    .user-login .saudar-user {
+        display: none;
+    }
+
+    .section-1 .img-destaque {
+
+    }
+
+    main > .section-1 > .img-destaque > img {
+        height: 360px;
+        width: 100%;
+    }
 }
