@@ -7,9 +7,11 @@
         display: grid;
         height: 200px;
         grid-template-rows: 52px 150px 40px;
-        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: repeat(3, 1fr); */
         grid-template-columns: 70px 1fr 70px;
+        grid-template-columns: 1fr;
         background: lightcyan;
+        background: green;
       }
 
     header > .promocao {
@@ -25,17 +27,16 @@
 
     header > .icons-container {
         display: grid;
-        grid-column: 2;
         grid-row: 2;
         grid-template-rows: 1fr 1fr 25px;
         grid-template-columns: repeat(4, 1fr);        
-        row-gap: 10px;
     }
 
     header .menumobile-container {
         display: block;
         grid-column: 1;
         grid-row: 1;
+        justify-self: center;
     }
 
     header > .icons-container > .icon-avanti-container {
@@ -67,8 +68,9 @@
 
     header > .icons-container .result-pesquisa {
         grid-row: 3;
-        grid-column: 2/-1;
-        background: green;
+        grid-column: 1/-1;
+        justify-self: center;
+        /* background: green; */
       } 
 
     header .nav-options {
@@ -100,6 +102,7 @@
     }
 
     main > .section-1 {
+        /* background: yellow; */
         grid-template-rows: 370px 460px 30px;
         grid-template-columns: 1fr;
         width: 100vw;
@@ -114,22 +117,104 @@
         width: 100%;
     }
 
-    main > .section-2 {
-        grid-template-columns: 1fr;
+    main > .section-1 .text-details {
+        background: gray;
+        /* grid-template-columns: auto auto; */
         width: 100vw;
     }
 
-    main > .section-2  img {
-        width: 100px;
+    main > .section-1 .text-details h2 {
+        justify-self: center;
     }
+
+    main > .section-2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 1fr;
+        width: 100vw;
+        height: 120vh;
+        /* background: pink; */
+    }
+
+    main > .section-2 > .img-container {
+        grid-row: 1;
+        grid-column: 1;
+        height: 390px;
+    }
+
+    main > .section-2 > .img-container > img {
+        width: 100%;
+        height: 100%;
+    }
+
+    main > .section-2 article{
+        grid-column: 1;
+        grid-row: 2;
+        gap: 15px;
+        grid-template-rows: 1fr 1fr 1fr;
+        /* background: purple; */
+        height: 310px;
+    }
+
+    .xicara-e-texto > article h1 {
+        font-size: 24px;
+        margin-left: 24px;
+    }
+
+    .xicara-e-texto > article > p {
+        font-size: 14px;
+    }
+
+    .xicara-e-texto > article > div.versao-mobile {
+        display: grid;
+        row-gap: 20px;
+        padding: 24px;
+        /* background: seagreen; */
+      }
+
+    .xicara-e-texto > article > div.versao-desktop {
+        display: none;
+    }  
 
     main > .section-3 {
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
         width: 100vw;
+        height: 110vh;
     }
 
-    main > .section-3  img {
-        width: 100px;
+    main > .section-3 > .img-container{
+        grid-row: 1;
+        grid-column: 1;
+        height: 349px;
+        width: 349px;
+        margin-left: 0px;
+    }
+
+    main > .section-3 > .img-container > img {
+        width: 100%;
+        height: 100%;
+    }
+
+    main > .section-3 article {
+        grid-row: 2;
+        grid-column: 1;
+        row-gap: 20px;
+    }
+
+    main > .section-3 article img {
+        height: 60px;
+    }
+
+    main > .section-3 article ul {
+        column-gap: 0px;
+        row-gap: 20px;
+        grid-template-columns: auto auto;
+        padding-left: 20px;
+    }
+
+    main > .section-3 article li {
+        font-size: 12px;
+        max-width: 200px;
     }
 
     main > .section-4 {
