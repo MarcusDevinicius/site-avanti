@@ -5,12 +5,10 @@
 
     header {
         display: grid;
-        height: 150px;
-        /* width: 100%; */
-        grid-template-rows: 52px 80px 40px;
+        height: 200px;
+        grid-template-rows: 52px 150px 40px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-columns: 70px 1fr 70px;
-        position: relative;
         background: lightcyan;
       }
 
@@ -25,30 +23,74 @@
         grid-column: 1/-1;
     }  
 
+    header > .icons-container {
+        display: grid;
+        grid-column: 2;
+        grid-row: 2;
+        grid-template-rows: 1fr 1fr 25px;
+        grid-template-columns: repeat(4, 1fr);        
+        row-gap: 10px;
+    }
+
     header .menumobile-container {
         display: block;
         grid-column: 1;
-        grid-row: 2;
+        grid-row: 1;
     }
 
     header > .icons-container > .icon-avanti-container {
         background: green;
+        grid-column: 2/4;
+        grid-row: 1;
+        justify-self: center;
     }
 
     header > .icons-container > .input-container{
-        background: rgb(172, 27, 136);
+        grid-template-columns: repeat(4, 1fr);
         width: 70%;
+        height: 40px;
+        grid-row: 2;
+        grid-column: 1/5;
     }
 
     header > .icons-container > .input-container > input {
-        background: yellow;
+        grid-column: 1/4;
         width: 100%;
+        height: 36px;
+        padding-left: 20px;
     }
 
+    header > .icons-container > .input-container > button {
+        grid-column: 4;
+        height: 36px;
+    }
+
+    header > .icons-container .result-pesquisa {
+        grid-row: 3;
+        grid-column: 2/-1;
+        background: green;
+      } 
+
     header .nav-options {
+        background: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        grid-column: 2;
+        position: absolute;
+        top: 100px;
+        left: 0px;
         display: none;
     }
 
+    header .nav-options ul {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    header .nav-options .hamburguer {
+        display: none;
+    }
     .user-login img.bnc-user {
         display: none;
     }
@@ -58,6 +100,7 @@
     }
 
     main > .section-1 {
+        grid-template-rows: 370px 460px 30px;
         grid-template-columns: 1fr;
         width: 100vw;
     }
@@ -66,8 +109,49 @@
 
     }
 
-    /* main > .section-1 > .img-destaque > img {
+    main > .section-1 > .img-destaque > img {
         height: 360px;
         width: 100%;
+    }
+
+    main > .section-2 {
+        grid-template-columns: 1fr;
+        width: 100vw;
+    }
+
+    main > .section-2  img {
+        width: 100px;
+    }
+
+    main > .section-3 {
+        grid-template-columns: 1fr;
+        width: 100vw;
+    }
+
+    main > .section-3  img {
+        width: 100px;
+    }
+
+    main > .section-4 {
+        grid-template-columns: 1fr;
+        width: 100vw;
+    }
+
+    main > .section-4  img {
+        width: 100px;
+    }
+
+    main > .section-5 {
+        grid-template-columns: 1fr;
+        width: 100vw;
+    }
+
+    main > .section-6  img {
+        width: 100px;
+    }
+
+    /* main > .section-6 {
+        grid-template-columns: 1fr;
+        width: 100vw;
     } */
 }
