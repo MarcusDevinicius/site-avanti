@@ -6,10 +6,12 @@
     header {
         display: grid;
         height: 150px;
+        /* width: 100%; */
         grid-template-rows: 52px 80px 40px;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-columns: 70px 1fr 70px;
         position: relative;
+        background: lightcyan;
       }
 
     header > .promocao {
@@ -29,6 +31,24 @@
         grid-row: 2;
     }
 
+    header > .icons-container > .icon-avanti-container {
+        background: green;
+    }
+
+    header > .icons-container > .input-container{
+        background: rgb(172, 27, 136);
+        width: 70%;
+    }
+
+    header > .icons-container > .input-container > input {
+        background: yellow;
+        width: 100%;
+    }
+
+    header .nav-options {
+        display: none;
+    }
+
     .user-login img.bnc-user {
         display: none;
     }
@@ -37,12 +57,17 @@
         display: none;
     }
 
+    main > .section-1 {
+        grid-template-columns: 1fr;
+        width: 100vw;
+    }
+
     .section-1 .img-destaque {
 
     }
 
-    main > .section-1 > .img-destaque > img {
+    /* main > .section-1 > .img-destaque > img {
         height: 360px;
         width: 100%;
-    }
+    } */
 }
