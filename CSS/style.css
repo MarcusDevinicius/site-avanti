@@ -686,6 +686,10 @@ main > .section-1 > .pontinhos-carrossel {
   width: 100%;
 }
 
+.section-6 .img-container-avanti img.banner-mobile {
+  display: none;
+}
+
 .section-6 > .form-container {
   display: grid;
   grid-template-rows: 40px 1fr;

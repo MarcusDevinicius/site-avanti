@@ -180,13 +180,14 @@
         grid-template-rows: 1fr 1fr;
         width: 100vw;
         height: 110vh;
+        padding: 20px 10px;
     }
 
     main > .section-3 > .img-container{
         grid-row: 1;
         grid-column: 1;
         height: 349px;
-        width: 349px;
+        max-width: 349px;
         margin-left: 0px;
     }
 
@@ -205,6 +206,10 @@
         height: 60px;
     }
 
+    main > .section-3 article h1 {
+        font-size: 20px;
+    }
+
     main > .section-3 article ul {
         column-gap: 0px;
         row-gap: 20px;
@@ -219,24 +224,155 @@
 
     main > .section-4 {
         grid-template-columns: 1fr;
+        grid-template-rows: 400px 1fr;
         width: 100vw;
+        background: dodgerblue;
+        height: 123vh;
     }
 
-    main > .section-4  img {
-        width: 100px;
+    main > .section-4 .img-container {
+        grid-column: 1;
+        grid-row: 1;
+        height: 390px;
+        max-width: 390px;
     }
 
-    main > .section-5 {
+    main > .section-4 .img-container > img {
+        width: 100%;
+        height: 100%;
+    }
+
+    main > .section-4 article {
+        row-gap: 0px;
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    main > .section-4 article h1 {
+        font-size: 24px;
+        align-self: center;
+    }
+
+    main > .section-4 article div.versao-mobile {
+        padding: 18px 24px;
+        grid-row: 30px;
+    }
+
+    main > .section-5-carrossel {
+        background: rgb(0, 214, 89);
         grid-template-columns: 1fr;
         width: 100vw;
+    }
+
+    main > .section-5-carrossel div.text-details {
+        background: rgb(184, 156, 156);
+        width: 100vw;
+    }
+
+    main > .section-5-carrossel div.text-details h2 {
+        justify-self: center;
+    }
+
+    .section-6 {
+        background: seagreen;
+        grid-template-columns: 1fr;
+        grid-template-rows: 445px 1fr;
+        height: 130vh;
+        row-gap: 61px;
     }
 
     main > .section-6  img {
         width: 100px;
     }
 
-    /* main > .section-6 {
+    .section-6 .img-container-avanti {
+        max-width: 390px;
+        height: 449px;
+        margin: auto;
+    }
+
+    .section-6 img.banner-desktop {
+        display: none;
+    }
+
+    .section-6 .img-container-avanti img.banner-mobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .section-6 .form-container {
+        background: greenyellow;
+        grid-column: 1;
+        grid-row: 2;
+        grid-template-rows: 30px 370px;
+    }
+
+    .section-6 .form-container form {
         grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        row-gap: 16px;
+        padding: 16px;
+        background: #F5F5F5;
+        border-radius: 8px;
+        height: 358px;
+        width: 80%;
+    }
+
+    .section-6 .form-container form input.nome{
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+
+    }
+
+    .section-6 .form-container form input.email{
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+
+    }
+
+    .section-6 .form-container form div.check-container {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 200vh;
         width: 100vw;
-    } */
+    }
+
+    footer article.info-avanti {
+        max-width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    footer .info-avanti div.avanti-redes {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    footer .info-avanti div.institucional {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    footer .info-avanti div.central-ajuda {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    footer .info-avanti div.atendimento {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    footer .info-avanti div.formas-pagamento {
+        grid-column: 1;
+        grid-row: 5;
+    }
 }
