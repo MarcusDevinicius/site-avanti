@@ -315,6 +315,10 @@ main > .section-1 > .img-destaque > img {
   width: 100%;
 }
 
+main .section-1 .img-destaque-mobile {
+  display: none;
+}
+
 .carrossel-container {
   grid-row: 2;
   display: grid;

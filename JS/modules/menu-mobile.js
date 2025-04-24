@@ -8,6 +8,7 @@ export default function menuMobile() {
 
     function ativaMenu() {
         menuMobile.classList.toggle('ativo');
+        hamburguer.classList.toggle('ativo')
         html.addEventListener('click', clickOutside);
     }
 
