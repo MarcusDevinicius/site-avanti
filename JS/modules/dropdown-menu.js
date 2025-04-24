@@ -10,6 +10,12 @@ export default class DropdownMenu {
         this.handleClickOutside = this.handleClickOutside.bind(this);
     }
 
+    removeEventMenuMobile() {
+        this.events.forEach((userEvent) => {
+            this.option.removeEventListener(userEvent, this.animaDrop); 
+        });
+    }
+
     clickOutside() {
         this.html.addEventListener('click', this.handleClickOutside);
     }
@@ -29,10 +35,11 @@ export default class DropdownMenu {
         this.events.forEach((userEvent) => {
             this.option.addEventListener(userEvent, this.animaDrop); 
         });
-    }
+    };
 
     init() {
         console.log( this.option,  this.burguer,  this.submenu);
         this.addEventListeners();
+        this.removeEventMenuMobile();
     }
 }
