@@ -378,7 +378,9 @@ main .section-1 .img-destaque-mobile {
   grid-row: 2;
   align-self: center;
   justify-self: start;
-  position: relative;
+  position: absolute;
+  left: 1370px;
+  top: 882px;
   z-index: 1000;
   margin-left: -15px;
   cursor: pointer;
@@ -634,6 +636,7 @@ main > .section-1 > .pontinhos-carrossel {
   display: grid;
   grid-template-columns: 135px 1fr 135px;
   grid-template-rows: 460px 30px;
+  position: relative;
 }
 
 .carrossel-section-5 {
@@ -649,6 +652,9 @@ main > .section-1 > .pontinhos-carrossel {
 .section-5-carrossel > .seta-direita {
   grid-column: 3;
   grid-row: 1;
+  position: absolute;
+  left: -10px;
+  top: 212px;
 }
 
 .section-5-carrossel > .pontinhos-carrossel {
