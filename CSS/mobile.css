@@ -1,7 +1,7 @@
 @media(width <= 767px) {
-    body {
+    /* body {
         background: red;
-    }
+    } */
 
     header {
         display: grid;
@@ -10,8 +10,6 @@
         /* grid-template-columns: repeat(3, 1fr); */
         grid-template-columns: 70px 1fr 70px;
         grid-template-columns: 1fr;
-        background: lightcyan;
-        background: green;
       }
 
     header > .promocao {
@@ -40,7 +38,6 @@
     }
 
     header > .icons-container > .icon-avanti-container {
-        background: green;
         grid-column: 2/4;
         grid-row: 1;
         justify-self: center;
@@ -118,7 +115,6 @@
     }
 
     main > .section-1 .text-details {
-        background: gray;
         /* grid-template-columns: auto auto; */
         width: 100vw;
     }
@@ -226,7 +222,6 @@
         grid-template-columns: 1fr;
         grid-template-rows: 400px 1fr;
         width: 100vw;
-        background: dodgerblue;
         height: 123vh;
     }
 
@@ -259,13 +254,11 @@
     }
 
     main > .section-5-carrossel {
-        background: rgb(0, 214, 89);
         grid-template-columns: 1fr;
         width: 100vw;
     }
 
     main > .section-5-carrossel div.text-details {
-        background: rgb(184, 156, 156);
         width: 100vw;
     }
 
@@ -274,7 +267,6 @@
     }
 
     .section-6 {
-        background: seagreen;
         grid-template-columns: 1fr;
         grid-template-rows: 445px 1fr;
         height: 130vh;
@@ -302,7 +294,6 @@
     }
 
     .section-6 .form-container {
-        background: greenyellow;
         grid-column: 1;
         grid-row: 2;
         grid-template-rows: 30px 370px;
@@ -343,7 +334,7 @@
     footer {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        height: 200vh;
+        height: 120vh;
         width: 100vw;
     }
 
@@ -351,30 +342,120 @@
         max-width: 100vw;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
+        background: #F5F5F5;
     }
+
+    footer article.info-avanti.inativo {
+        grid-template-rows: 150px repeat(4, 60px);
+    }
+
+    /* footer article.info-avanti > div.grid-mobile {
+        grid-template-columns: 1fr 1fr;
+    } */
 
     footer .info-avanti div.avanti-redes {
         grid-column: 1;
         grid-row: 1;
+        border-bottom: 1px solid gray;
     }
+
+    footer .info-avanti div.avanti-redes > img {
+        justify-self: center;
+    }
+
+    footer .info-avanti div.avanti-redes .redes-container {
+        justify-self: center;
+    }
+
+    footer .arrow-atv-mobile {
+        display: block;
+      }
+
+    footer .grid-mobile .container-titulo {
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    footer .grid-mobile .container-titulo > img.arrow-atv-mobile {
+        grid-column: 2;
+        align-self: center;
+        transform: rotate(90deg);
+    }
+
+    footer .grid-mobile .topicos img.arrow-atv-mobile{
+        transform: rotate(180deg);
+    }
+
+    footer .grid-mobile .topicos.inativo {
+        display: none;
+    }
+
+    .grid-mobile {
+        border-bottom: 1px solid gray;
+    }
+
+    /* .grid-mobile.inativo{
+        background: lightcoral;
+    } */
 
     footer .info-avanti div.institucional {
         grid-column: 1;
         grid-row: 2;
+        padding-left: 16px;
+    }
+
+    footer .info-avanti div.institucional .topicos h5 {
+        grid-column: 1;
+        grid-row: 1;
     }
 
     footer .info-avanti div.central-ajuda {
         grid-column: 1;
         grid-row: 3;
+        padding-left: 16px;
+
     }
 
     footer .info-avanti div.atendimento {
         grid-column: 1;
         grid-row: 4;
+        padding-left: 16px;
+
     }
 
     footer .info-avanti div.formas-pagamento {
         grid-column: 1;
         grid-row: 5;
+        padding-left: 16px;
+        justify-self: center;
+    }
+
+    footer .formas-pagamento {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    footer > article.final {
+        max-width: 100vw;
+        height: 170px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    footer > article.final > div.versao-desktop {
+        display: none;
+    }
+
+    footer > article.final > div.versao-mobile {
+        display: block;
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0 16px;
+    }
+
+    footer > article.final > div.marcas {
+        grid-column: 1;
+        grid-row: 2;
     }
 }

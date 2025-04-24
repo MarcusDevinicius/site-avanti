@@ -1,6 +1,7 @@
 import RolarCarrossel from "./modules/rolar-carrossel.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
 import Pesquisa from "./modules/pesquisa.js";
+import alterarFooter from "./modules/altera-footer.js";
 
 
 const rolarcarrossel1 = new RolarCarrossel('.section-1 .carrossel', '.section-1 .seta-esquerda', '.section-1 .seta-direita', '.section-1 .pontinho-carrossel');
@@ -19,3 +20,5 @@ dropdownmenu2.init();
 
 const pesquisa = new Pesquisa('[data-search="input"]', '[data-search="btn"]', '[data-search="result"]');
 pesquisa.init();
+
+alterarFooter();
