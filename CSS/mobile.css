@@ -283,7 +283,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: 400px 1fr;
         width: 100vw;
-        height: 108vh;
+        height: 115vh;
     }
 
     main > .section-4 .img-container {
@@ -316,11 +316,12 @@
 
     main > .section-5-carrossel {
         grid-template-columns: 1fr;
-        width: 100vw;
+        width: 90vw;
+        margin: auto;
     }
 
     main > .section-5-carrossel div.text-details {
-        width: 100vw;
+        width: 90vw;
     }
 
     main > .section-5-carrossel div.text-details h2 {
