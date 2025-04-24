@@ -1,13 +1,8 @@
 @media(width <= 767px) {
-    /* body {
-        background: red;
-    } */
-
     header {
         display: grid;
         height: 200px;
         grid-template-rows: 52px 150px 40px;
-        /* grid-template-columns: repeat(3, 1fr); */
         grid-template-columns: 70px 1fr 70px;
         grid-template-columns: 1fr;
       }
@@ -67,7 +62,6 @@
         grid-row: 3;
         grid-column: 1/-1;
         justify-self: center;
-        /* background: green; */
       } 
 
     header .nav-options {
@@ -119,27 +113,40 @@
     }
 
     main > .section-1 {
-        /* background: yellow; */
         grid-template-rows: 370px 460px 30px;
-        grid-template-columns: 1fr;
+        grid-template-columns: 20px 1fr 20px;
         width: 100vw;
     }
-
-    .section-1 .img-destaque {
-
+    
+    main > .section-1 > .img-destaque {
+        width: 100vw;
+        height: 360px;
+        grid-column: 1;
+        grid-row: 1;
     }
 
     main > .section-1 > .img-destaque > img {
-        height: 360px;
+        height: 100%;
         width: 100%;
     }
 
     main > .section-1 .text-details {
-        /* grid-template-columns: auto auto; */
         width: 100vw;
     }
 
     main > .section-1 .text-details h2 {
+        justify-self: center;
+    }
+
+    main > .section-1 .seta-esquerda {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    main > .section-1 .carrossel-container {
+        width: 80vw;
+        grid-column: 2;
+        grid-row: 2;
         justify-self: center;
     }
 
@@ -148,7 +155,6 @@
         grid-template-rows: 400px 1fr;
         width: 100vw;
         height: 120vh;
-        /* background: pink; */
     }
 
     main > .section-2 > .img-container {
@@ -167,7 +173,6 @@
         grid-row: 2;
         gap: 15px;
         grid-template-rows: 1fr 1fr 1fr;
-        /* background: purple; */
         height: 310px;
     }
 
@@ -184,7 +189,6 @@
         display: grid;
         row-gap: 20px;
         padding: 24px;
-        /* background: seagreen; */
       }
 
     .xicara-e-texto > article > div.versao-desktop {
@@ -369,10 +373,6 @@
         grid-template-rows: 150px repeat(4, 60px);
     }
 
-    /* footer article.info-avanti > div.grid-mobile {
-        grid-template-columns: 1fr 1fr;
-    } */
-
     footer .info-avanti div.avanti-redes {
         grid-column: 1;
         grid-row: 1;
@@ -414,10 +414,6 @@
         border-bottom: 1px solid gray;
     }
 
-    /* .grid-mobile.inativo{
-        background: lightcoral;
-    } */
-
     footer .info-avanti div.institucional {
         grid-column: 1;
         grid-row: 2;
@@ -440,7 +436,6 @@
         grid-column: 1;
         grid-row: 4;
         padding-left: 16px;
-
     }
 
     footer .info-avanti div.formas-pagamento {

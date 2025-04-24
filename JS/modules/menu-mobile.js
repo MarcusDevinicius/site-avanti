@@ -1,7 +1,6 @@
 import DropdownMenu from "./dropdown-menu.js";
 export default function menuMobile() {
     const hamburguer = document.querySelector('.menumobile-container');
-    console.log(hamburguer);
     const menuMobile = document.querySelector('.nav-options');
     const html = document.documentElement;
 

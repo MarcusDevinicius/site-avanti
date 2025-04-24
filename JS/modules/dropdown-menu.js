@@ -38,7 +38,6 @@ export default class DropdownMenu {
     };
 
     init() {
-        console.log( this.option,  this.burguer,  this.submenu);
         this.addEventListeners();
         this.removeEventMenuMobile();
     }
