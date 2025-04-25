@@ -491,6 +491,9 @@
     footer .formas-pagamento {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
+        background: orange;
+        row-gap: 10px;
+        max-height: 200px;
     }
 
     footer > article.final {
