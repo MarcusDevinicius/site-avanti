@@ -4,6 +4,7 @@ export default function alterarFooter() {
     const gridMobile = document.querySelectorAll('.grid-mobile');
     const infoAvanti = document.querySelector('.info-avanti');
     const titulos = document.querySelectorAll('.container-titulo');
+    const formaPagamento = document.querySelector('.formas-pagamento');
 
     if(tamTela <= 767) {
         topicos.forEach(topico => {
@@ -24,5 +25,6 @@ export default function alterarFooter() {
     function accordionList(event) {
         event.currentTarget.nextElementSibling.classList.toggle('inativo');
         infoAvanti.classList.toggle('inativo');
+        formaPagamento.classList.toggle('inativo')
     }
 }
