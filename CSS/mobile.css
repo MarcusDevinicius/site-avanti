@@ -396,12 +396,14 @@
     footer {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        height: 80vh;
+        height: 90vh;
         width: 100vw;
+        row-gap: 40px;
     }
 
     footer article.info-avanti {
         max-width: 100vw;
+        height: 450px;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
         background: #F5F5F5;
@@ -491,7 +493,6 @@
     footer .formas-pagamento {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        background: orange;
         row-gap: 10px;
         max-height: 200px;
     }
